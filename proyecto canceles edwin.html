@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cancelaría Escolar con PVC Reciclado</title>
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #f6f7f2;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .hero {
+      min-height: 94vh;
+      padding: 24px;
+      color: white;
+      background:
+        linear-gradient(rgba(8, 28, 34, .66), rgba(8, 28, 34, .86)),
+        url("WhatsApp Image 2026-06-04 at 12.42.41 AM (11).jpeg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+     max-width: 1180px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 1000;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: rgba(8, 28, 34, .88);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform .35s ease, opacity .35s ease;
+    }
+
+.nav.nav-hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+    .brand {
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a,
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero-content {
+       max-width: 1180px;
+  width: 100%;
+  margin: auto;
+  padding: 120px 0 80px;
+    }
+
+    .eyebrow,
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 900;
+      color: #4f9d7a;
+    }
+
+    .hero .eyebrow {
+      color: #a7f3d0;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 10px 0 18px;
+      font-size: clamp(2.35rem, 6vw, 5.1rem);
+      line-height: 1;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.75rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      color: #123039;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: #123039;
+    }
+
+    p { margin-top: 0; }
+
+    .intro {
+      max-width: 720px;
+      font-size: 1.15rem;
+      color: #eef7f2;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .primary {
+      background: #4f9d7a;
+      color: white;
+    }
+
+    .secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 74px 24px;
+    }
+
+    .two-column,
+    .safety {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .text-block p {
+      font-size: 1.05rem;
+    }
+
+    .muted {
+      max-width: none;
+      background: #e8efe7;
+    }
+
+    .muted > .section-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 74px 24px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card,
+    .photo-card,
+    .panel,
+    .reference-visual,
+    .chemical-visual {
+      background: white;
+      border: 1px solid #dfe5dd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card,
+    .panel,
+    .reference-visual,
+    .chemical-visual {
+      padding: 22px;
+    }
+
+    .card span {
+      display: block;
+      color: #4f9d7a;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+    }
+
+    .photo-card.tall img {
+      height: 520px;
+    }
+
+    .photo-card .caption {
+      padding: 16px 18px 18px;
+    }
+
+    .photo-card .caption p {
+      margin-bottom: 0;
+      color: #52616b;
+    }
+
+    .timeline {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline li {
+      background: white;
+      border-left: 6px solid #4f9d7a;
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .panel ul,
+    .safety-list ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .good { border-top: 6px solid #4f9d7a; }
+    .warn { border-top: 6px solid #c08432; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid #dfe5dd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 14px;
+      border-bottom: 1px solid #dfe5dd;
+      vertical-align: top;
+    }
+
+    th {
+      background: #123039;
+      color: white;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .iron-diagram {
+      min-height: 280px;
+      background: #eef3ef;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+
+    .iron {
+      width: 210px;
+      height: 82px;
+      background: #123039;
+      border-radius: 18px 28px 10px 10px;
+      position: relative;
+      transform: skewX(-10deg);
+      box-shadow: 0 18px 0 #4f9d7a;
+      z-index: 2;
+    }
+
+    .iron::before {
+      content: "";
+      position: absolute;
+      width: 92px;
+      height: 34px;
+      border: 10px solid #123039;
+      border-bottom: 0;
+      border-radius: 30px 30px 0 0;
+      top: -42px;
+      left: 54px;
+    }
+
+    .heat-lines {
+      position: absolute;
+      bottom: 82px;
+      display: flex;
+      gap: 20px;
+      z-index: 1;
+    }
+
+    .heat-lines span {
+      width: 4px;
+      height: 44px;
+      background: #c08432;
+      border-radius: 20px;
+    }
+
+    .pvc-sheet {
+      position: absolute;
+      bottom: 48px;
+      width: 78%;
+      height: 24px;
+      background: #f8faf5;
+      border: 2px solid #cbd5c0;
+      border-radius: 4px;
+    }
+
+    .chemical-visual {
+      display: grid;
+      gap: 18px;
+    }
+
+    .reaction-board {
+      background: #eef3ef;
+      border-radius: 8px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .molecule {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .atom {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: .85rem;
+    }
+
+    .c { background: #123039; }
+    .h { background: #4f9d7a; }
+    .cl { background: #c08432; }
+
+    .bond {
+      width: 24px;
+      height: 4px;
+      background: #52616b;
+      border-radius: 20px;
+    }
+
+    .arrow-reaction {
+      font-size: 2.4rem;
+      color: #123039;
+      font-weight: 900;
+    }
+
+    .reaction-caption {
+      font-size: .95rem;
+      color: #52616b;
+      margin: 8px 0 0;
+    }
+
+    .safe-box {
+      background: #ecfdf5;
+      border-left: 6px solid #4f9d7a;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 6px solid #c08432;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .science-note {
+      background: #123039;
+      color: white;
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .science-note h3 {
+      color: white;
+    }
+
+    .formula {
+      background: #eef3ef;
+      border-left: 6px solid #4f9d7a;
+      border-radius: 8px;
+      padding: 18px;
+      font-weight: 700;
+      margin-top: 24px;
+    }
+
+    .safety {
+      max-width: none;
+      background: #123039;
+      color: white;
+    }
+
+    .safety > * {
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .safety h2 {
+      color: white;
+    }
+
+    .safety .section-label {
+      color: #a7f3d0;
+    }
+
+    .conclusion {
+      text-align: center;
+      max-width: 880px;
+    }
+
+    .sources {
+      font-size: .95rem;
+      color: #52616b;
+    }
+
+    footer {
+      background: #0b232a;
+      color: white;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .hero { min-height: auto; }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .two-column,
+      .safety,
+      .compare-grid,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .reaction-board {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 54px 18px;
+      }
+
+      .muted > .section-inner {
+        padding: 54px 18px;
+      }
+
+      .photo-card img,
+      .photo-card.tall img {
+        height: 330px;
+      }
+
+      .arrow-reaction {
+        transform: rotate(90deg);
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <div class="brand">PVC Reciclado</div>
+      <div class="nav-links">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#maquinaria">Maquinaria</a>
+        <a href="#mejoras">Mejoras</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#costos">Costos</a>
+        <a href="#ciencia">Ciencia</a>
+        <a href="#prototipo">Prototipo</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Proyecto escolar de cancelería sustentable</p>
+      <h1>Prototipo de cancelería con PVC reciclado</h1>
+      <p class="intro">
+        Una maqueta escolar hecha con piezas de PVC recuperado, técnica de laminado, planchado
+        controlado, prensado artesanal, lijado y acrílico como simulación del vidrio.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#proceso">Ver proceso</a>
+        <a class="button secondary" href="#ciencia">Justificación científica</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section two-column" id="proyecto">
+      <div>
+        <p class="section-label">Idea central</p>
+        <h2>Reciclar, transformar y demostrar</h2>
+      </div>
+      <div class="text-block">
+        <p>
+          Este proyecto escolar busca demostrar que el PVC recuperado puede transformarse en piezas
+          tipo perfil para una maqueta de cancelería. El objetivo no es fabricar una ventana real
+          lista para instalarse, sino comprobar una idea técnica y ambiental usando herramientas
+          accesibles.
+        </p>
+        <p>
+          El prototipo se realizó con una técnica artesanal de laminado: se cortaron piezas de PVC,
+          se acomodaron por capas, se calentaron con plancha, se prensaron, se lijaron y se
+          ensamblaron para formar un marco. Para simular el vidrio se utilizó acrílico.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">Marco histórico</p>
+        <h2>Origen e importancia del PVC</h2>
+      </div>
+      <p>
+        El PVC, o policloruro de vinilo, es uno de los plásticos más usados en el mundo. Fue
+        descubierto en el siglo XIX, pero su uso comercial creció cuando se logró hacerlo más
+        procesable y útil para aplicaciones industriales. En el siglo XX comenzó a utilizarse en
+        cables, recubrimientos, tuberías, pisos y perfiles.
+      </p>
+      <p>
+        En construcción, el PVC rígido se volvió importante porque resiste humedad, no se oxida,
+        es ligero y puede fabricarse en formas largas como tuberías o perfiles. Por eso resulta
+        interesante para un proyecto escolar de cancelería sustentable.
+      </p>
+    </section>
+
+    <section class="muted">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="section-label">Material recuperado</p>
+          <h2>PVC usado como materia prima</h2>
+        </div>
+        <div class="grid-2">
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.39 AM (6).jpeg" alt="Tubos y piezas de PVC recuperado en el piso" />
+            <div class="caption">
+              <h3>Residuos de PVC</h3>
+              <p>Piezas recuperadas que se pueden cortar y transformar para obtener tiras o perfiles.</p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.40 AM (4).jpeg" alt="Tiras de PVC cortadas para el laminado" />
+            <div class="caption">
+              <h3>Piezas cortadas</h3>
+              <p>El material se prepara en tiras para poder unirlo por capas mediante laminado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">Problema ambiental</p>
+        <h2>PVC y residuos de construcción</h2>
+      </div>
+      <p>
+        Muchos residuos de construcción y demolición terminan mezclados con cemento, tierra,
+        madera, vidrio, metal y plásticos. Cuando el PVC se desecha sin separación, puede terminar
+        en tiraderos o contaminar otros materiales reciclables.
+      </p>
+      <p>
+        Recuperar PVC limpio permite darle una segunda vida. En este proyecto, el material no se
+        funde industrialmente; se trabaja como prototipo escolar mediante corte, calentamiento
+        controlado, presión, lijado y ensamble.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">Propiedades</p>
+        <h2>Qué es el PVC y por qué sirve</h2>
+      </div>
+      <div class="compare-grid">
+        <article class="panel good">
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Resiste humedad y corrosión.</li>
+            <li>Es ligero y fácil de transportar.</li>
+            <li>Puede cortarse, lijarse y moldearse con herramientas básicas.</li>
+            <li>Funciona bien para piezas rígidas.</li>
+            <li>Puede reutilizarse si está limpio y separado.</li>
+          </ul>
+        </article>
+        <article class="panel warn">
+          <h3>Desventajas</h3>
+          <ul>
+            <li>No debe quemarse ni sobrecalentarse.</li>
+            <li>Puede liberar vapores irritantes si se degrada.</li>
+            <li>El reciclado puede tener suciedad o impurezas.</li>
+            <li>La resistencia cambia según el origen del residuo.</li>
+            <li>El acabado artesanal requiere mucho lijado y cuidado.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">PVC virgen y reciclado</p>
+        <h2>Diferencias importantes</h2>
+      </div>
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>PVC virgen</th>
+          <th>PVC reciclado</th>
+        </tr>
+        <tr>
+          <td>Origen</td>
+          <td>Resina nueva producida industrialmente.</td>
+          <td>Material recuperado de residuos o sobrantes.</td>
+        </tr>
+        <tr>
+          <td>Calidad</td>
+          <td>Más constante y predecible.</td>
+          <td>Puede variar según limpieza, edad y tipo de pieza.</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>Más fácil de controlar.</td>
+          <td>Puede quedar manchado, rayado o irregular.</td>
+        </tr>
+        <tr>
+          <td>Uso escolar</td>
+          <td>Menos ecológico para una maqueta.</td>
+          <td>Ideal para demostrar reutilización y economía circular.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="section-heading">
+        <p class="section-label">Proceso escolar</p>
+        <h2>Cómo se fabricó el prototipo</h2>
+      </div>
+      <ol class="timeline">
+        <li><strong>Recolección.</strong> Se juntaron piezas de PVC recuperado, principalmente tubos y sobrantes.</li>
+        <li><strong>Corte.</strong> Las piezas se cortaron en tiras para poder trabajarlas como láminas.</li>
+        <li><strong>Laminado.</strong> Las tiras se acomodaron por capas para formar piezas más gruesas.</li>
+        <li><strong>Planchado controlado.</strong> Antes de prensar, el PVC se calentó con una plancha para ablandarlo y facilitar que las capas se adaptaran a la forma deseada.</li>
+        <li><strong>Prensado.</strong> Después del calentamiento, se usaron madera, tornillos y prensas para mantener presión durante el armado.</li>
+        <li><strong>Lijado.</strong> Se corrigieron bordes, marcas e irregularidades.</li>
+        <li><strong>Ensamble.</strong> Se formó un marco con cortes en ángulo.</li>
+        <li><strong>Acrílico.</strong> Se colocó una lámina translúcida para simular el vidrio.</li>
+        <li><strong>Acabado.</strong> Se aplicó pintura para mejorar la presentación final.</li>
+      </ol>
+    </section>
+
+    <section class="muted">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="section-label">Evidencia del proceso</p>
+          <h2>Corte, prensado y preparación</h2>
+        </div>
+        <div class="grid-3">
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.39 AM (9).jpeg" alt="Caladora y piezas de PVC cortadas" />
+            <div class="caption">
+              <h3>Corte del PVC</h3>
+              <p>La caladora permitió convertir piezas grandes en tiras manejables.</p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.40 AM (15).jpeg" alt="Prensa con madera usada para comprimir piezas" />
+            <div class="caption">
+              <h3>Prensado artesanal</h3>
+              <p>La presión ayudó a mantener la forma durante el laminado.</p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.40 AM (7).jpeg" alt="Materiales y herramientas sobre mesa de trabajo" />
+            <div class="caption">
+              <h3>Materiales auxiliares</h3>
+              <p>Silicón, tornillería, lijas y herramientas complementaron el armado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">Paso no fotografiado</p>
+        <h2>Planchado previo al prensado</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="reference-visual">
+          <div class="iron-diagram" aria-label="Ilustración de plancha caliente sobre PVC">
+            <div class="heat-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="iron"></div>
+            <div class="pvc-sheet"></div>
+          </div>
+          <div class="caption">
+            <h3>Imagen de referencia</h3>
+            <p>
+              Representa el momento en que las tiras de PVC se calentaron con plancha antes de pasar
+              a la prensa artesanal.
+            </p>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Por qué se planchó el material</h3>
+          <p>
+            El PVC rígido no se derrite como cera, pero al calentarse de forma controlada puede
+            ablandarse. Esto permitió que las tiras se acomodaran mejor antes del prensado.
+          </p>
+          <p>
+            La plancha funcionó como una herramienta escolar para aplicar calor directo. Después,
+            la presión ayudó a mantener las capas alineadas mientras el material se enfriaba.
+          </p>
+          <p>
+            Este paso debe hacerse con mucha precaución: el PVC no debe quemarse ni producir humo,
+            porque al degradarse puede liberar vapores irritantes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="maquinaria">
+      <div class="section-heading">
+        <p class="section-label">Punto 6</p>
+        <h2>Herramientas usadas en la versión escolar</h2>
+      </div>
+      <table>
+        <tr>
+          <th>Herramienta o material</th>
+          <th>Uso</th>
+          <th>Justificación</th>
+        </tr>
+        <tr>
+          <td>Caladora</td>
+          <td>Cortar tubos o piezas de PVC en tiras.</td>
+          <td>Permite preparar el material sin maquinaria industrial.</td>
+        </tr>
+        <tr>
+          <td>Plancha caliente</td>
+          <td>Ablandar el PVC antes de prensarlo.</td>
+          <td>Ayuda a que las capas se acomoden mejor durante el laminado.</td>
+        </tr>
+        <tr>
+          <td>Lijas</td>
+          <td>Corregir bordes y mejorar acabado.</td>
+          <td>Son económicas y necesarias para que el prototipo se vea limpio.</td>
+        </tr>
+        <tr>
+          <td>Prensas, tornillos y madera</td>
+          <td>Presionar y mantener alineadas las piezas.</td>
+          <td>Sirven como molde artesanal para el laminado.</td>
+        </tr>
+        <tr>
+          <td>Silicón o pegamento compatible</td>
+          <td>Ayudar al ensamble de piezas.</td>
+          <td>Facilita el armado de una maqueta escolar.</td>
+        </tr>
+        <tr>
+          <td>Pintura en aerosol</td>
+          <td>Dar acabado visual al marco.</td>
+          <td>Mejora la presentación del prototipo terminado.</td>
+        </tr>
+        <tr>
+          <td>Acrílico</td>
+          <td>Simular el vidrio.</td>
+          <td>Es más fácil y seguro de trabajar que vidrio real.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section" id="mejoras">
+      <div class="section-heading">
+        <p class="section-label">Punto 9</p>
+        <h2>Mejoras posibles</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <span>01</span>
+          <h3>Mejor alineación</h3>
+          <p>Usar guías o escuadras para que las piezas queden más rectas.</p>
+        </article>
+        <article class="card">
+          <span>02</span>
+          <h3>Más presión</h3>
+          <p>Aumentar el número de prensas para mejorar la unión de capas.</p>
+        </article>
+        <article class="card">
+          <span>03</span>
+          <h3>Lijado gradual</h3>
+          <p>Usar lijas de grano grueso, medio y fino para mejorar textura.</p>
+        </article>
+        <article class="card">
+          <span>04</span>
+          <h3>Mejor seguridad</h3>
+          <p>Usar lentes, guantes y ventilación durante corte, planchado, lijado y pintura.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="impacto">
+      <div class="section-heading">
+        <p class="section-label">Punto 15</p>
+        <h2>Impacto ambiental positivo</h2>
+      </div>
+      <p>
+        El principal impacto ambiental del proyecto es demostrar que un residuo plástico puede
+        convertirse en una pieza útil dentro de una maqueta. Aunque el prototipo no sea una ventana
+        comercial, sí ayuda a promover separación, reutilización y pensamiento sustentable.
+      </p>
+      <ul>
+        <li>Reduce el desperdicio de PVC en pequeña escala.</li>
+        <li>Promueve el reciclaje dentro de la escuela.</li>
+        <li>Evita comprar todo el material nuevo.</li>
+        <li>Enseña economía circular de forma visual.</li>
+        <li>Convierte residuos de construcción en material educativo.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="costos">
+      <div class="section-heading">
+        <p class="section-label">Costos aproximados</p>
+        <h2>Presupuesto escolar justificado</h2>
+      </div>
+      <table>
+        <tr>
+          <th>Material o herramienta</th>
+          <th>Costo aproximado</th>
+          <th>Justificación</th>
+        </tr>
+        <tr>
+          <td>PVC de 50 mm</td>
+          <td>$35 MXN por metro; 8 m = $280 MXN</td>
+          <td>Sirve como base para cortar tiras y formar los perfiles.</td>
+        </tr>
+        <tr>
+          <td>Pegamento para PVC</td>
+          <td>$180 - $189 MXN</td>
+          <td>Ayuda a unir piezas y reforzar el armado.</td>
+        </tr>
+        <tr>
+          <td>Tornillos para prensa</td>
+          <td>$40 MXN</td>
+          <td>Permiten hacer una prensa artesanal con madera.</td>
+        </tr>
+        <tr>
+          <td>Navaja para caladora</td>
+          <td>$38 MXN</td>
+          <td>Necesaria para cortar el PVC con mayor precisión.</td>
+        </tr>
+        <tr>
+          <td>Pintura en aerosol</td>
+          <td>$77 - $107 MXN</td>
+          <td>Mejora la presentación del marco.</td>
+        </tr>
+        <tr>
+          <td>Lijas</td>
+          <td>$50 MXN</td>
+          <td>Se usan para corregir bordes y acabado.</td>
+        </tr>
+        <tr>
+          <td>Tornillos y brocas</td>
+          <td>$97 MXN</td>
+          <td>Apoyan en el ensamble y fabricación de la prensa.</td>
+        </tr>
+        <tr>
+          <td>Silicón para ventana</td>
+          <td>$145 MXN</td>
+          <td>Ayuda a fijar o sellar la lámina de acrílico.</td>
+        </tr>
+        <tr>
+          <td>Lámina de acrílico</td>
+          <td>$399 - $400 MXN</td>
+          <td>Se usa como sustituto escolar del vidrio.</td>
+        </tr>
+        <tr>
+          <td><strong>Total aproximado</strong></td>
+          <td><strong>$1,199 - $1,236 MXN</strong></td>
+          <td><strong>Costo razonable para un prototipo escolar completo.</strong></td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="muted">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="section-label">Acrílico</p>
+          <h2>Sustituto escolar del vidrio</h2>
+        </div>
+        <div class="grid-2">
+          <article class="photo-card">
+            <img src="WhatsApp Image 2026-06-04 at 12.42.41 AM.jpeg" alt="Lámina de acrílico translúcida" />
+            <div class="caption">
+              <h3>Lámina transparente</h3>
+              <p>El acrílico permite simular el vidrio sin trabajar con vidrio real.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>Por qué se usó acrílico</h3>
+            <p>
+              Para una maqueta escolar es más seguro, ligero y fácil de cortar que el vidrio.
+              No tiene la misma resistencia ni acabado profesional que una ventana real, pero
+              funciona bien para representar la parte transparente del prototipo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clientes">
+      <div class="section-heading">
+        <p class="section-label">Posibles clientes</p>
+        <h2>Quién podría interesarse</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card"><h3>Escuelas</h3><p>Para ferias científicas, talleres ecológicos y clases de tecnología.</p></article>
+        <article class="card"><h3>Profesores</h3><p>Como ejemplo de reciclaje aplicado, prototipado y seguridad.</p></article>
+        <article class="card"><h3>Ferias ambientales</h3><p>Para explicar cómo un residuo puede convertirse en una maqueta útil.</p></article>
+        <article class="card"><h3>Talleres escolares</h3><p>Para practicar corte, lijado, medición y ensamble.</p></article>
+        <article class="card"><h3>Proyectos ecológicos</h3><p>Como muestra de economía circular en pequeña escala.</p></article>
+        <article class="card"><h3>Comunidad escolar</h3><p>Como propuesta creativa para reutilizar materiales.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="section-label">Alternativas existentes</p>
+        <h2>Competencia mencionada brevemente</h2>
+      </div>
+      <p>
+        En México existen empresas que fabrican ventanas de PVC con procesos profesionales, como
+        REHAU, Deceuninck, Kömmerling, Ventanas Ideal y Biowindows. Sin embargo, este proyecto no
+        compite directamente con ellas, porque su propósito es escolar y demostrativo.
+      </p>
+    </section>
+
+    <section class="section" id="ciencia">
+      <div class="section-heading">
+        <p class="section-label">Justificación científica</p>
+        <h2>Química, calor y resistencia del prototipo</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Explicación química</h3>
+          <p>
+            El PVC está formado por cadenas largas de polímero llamadas policloruro de vinilo.
+            Cuando se calienta moderadamente, el material puede ablandarse porque aumenta el
+            movimiento de sus cadenas. Por eso fue posible darle forma con plancha y después
+            mantenerla con presión.
+          </p>
+          <p>
+            Si el PVC se sobrecalienta, puede iniciar una degradación llamada deshidrocloración,
+            donde se libera ácido clorhídrico. Por eso el proyecto debe trabajar siempre sin humo,
+            sin flama directa y con ventilación.
+          </p>
+        </article>
+
+        <article class="science-note">
+          <h3>Idea clave</h3>
+          <p>
+            El proyecto aprovecha un cambio físico controlado: el PVC se ablanda con calor y luego
+            recupera rigidez al enfriarse. No se busca quemarlo ni descomponerlo químicamente.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-heading" style="margin-top: 42px;">
+        <p class="section-label">Reacción química</p>
+        <h2>Qué puede pasar al sobrecalentar PVC</h2>
+      </div>
+
+      <div class="chemical-visual">
+        <div class="reaction-board">
+          <div>
+            <h3>Calor controlado</h3>
+            <div class="molecule">
+              <div class="atom c">C</div>
+              <div class="bond"></div>
+              <div class="atom c">C</div>
+              <div class="bond"></div>
+              <div class="atom h">H</div>
+              <div class="bond"></div>
+              <div class="atom cl">Cl</div>
+            </div>
+            <p class="reaction-caption">
+              Con temperatura moderada, las cadenas del PVC tienen más movilidad y el material se ablanda.
+            </p>
+          </div>
+
+          <div class="arrow-reaction">→</div>
+
+          <div>
+            <h3>Sobrecalentamiento</h3>
+            <div class="molecule">
+              <div class="atom c">C</div>
+              <div class="bond"></div>
+              <div class="atom c">C</div>
+              <div class="bond"></div>
+              <div class="atom h">H</div>
+              <div class="bond"></div>
+              <div class="atom cl">Cl</div>
+              <div class="arrow-reaction">↑</div>
+              <div class="atom cl">HCl</div>
+            </div>
+            <p class="reaction-caption">
+              Si se calienta demasiado, puede iniciar degradación térmica y liberar ácido clorhídrico.
+            </p>
+          </div>
+        </div>
+
+        <div class="safe-box">
+          <h3>Lo que se buscó en el prototipo</h3>
+          <p>
+            En el proyecto se aprovechó principalmente un cambio físico: el PVC se ablandó con la plancha,
+            se acomodó por capas y después recuperó rigidez al enfriarse dentro de la prensa.
+          </p>
+        </div>
+
+        <div class="warning-box">
+          <h3>Lo que se debe evitar</h3>
+          <p>
+            No se debe quemar el PVC ni permitir que produzca humo. El humo o el olor fuerte indican que
+            el material puede estar degradándose, lo cual representa un riesgo para la salud.
+          </p>
+        </div>
+      </div>
+
+      <div class="section-heading" style="margin-top: 42px;">
+        <p class="section-label">Resistencia hipotética</p>
+        <h2>Cómo se podría comprobar</h2>
+      </div>
+
+      <table>
+        <tr>
+          <th>Prueba escolar</th>
+          <th>Qué mide</th>
+          <th>Resultado esperado</th>
+        </tr>
+        <tr>
+          <td>Flexión manual</td>
+          <td>Si el perfil se dobla o se rompe al aplicar fuerza.</td>
+          <td>El laminado debería resistir mejor que una sola tira delgada.</td>
+        </tr>
+        <tr>
+          <td>Carga con peso</td>
+          <td>Cuánto peso soporta el perfil antes de deformarse.</td>
+          <td>Más capas y mejor prensado deberían aumentar la rigidez.</td>
+        </tr>
+        <tr>
+          <td>Golpe ligero controlado</td>
+          <td>Resistencia al impacto accidental.</td>
+          <td>El PVC puede resistir golpes moderados, pero las uniones son el punto débil.</td>
+        </tr>
+        <tr>
+          <td>Exposición al sol</td>
+          <td>Si cambia color, forma o rigidez.</td>
+          <td>Puede amarillear o deformarse si el acabado no protege bien.</td>
+        </tr>
+        <tr>
+          <td>Revisión de uniones</td>
+          <td>Si las capas se separan.</td>
+          <td>La presión, el lijado y el adhesivo influyen mucho en la resistencia.</td>
+        </tr>
+      </table>
+
+      <div class="formula">
+        Hipótesis: a mayor número de capas + mejor presión + mejor alineación, mayor rigidez del perfil.
+      </div>
+
+      <p style="margin-top: 24px;">
+        Científicamente, la parte más importante del prototipo no es solo que se vea como una ventana,
+        sino comprobar si el método de laminado mejora la resistencia frente a piezas sueltas de PVC.
+        Para una versión escolar, bastaría comparar una tira individual contra una pieza laminada usando
+        el mismo peso o la misma fuerza.
+      </p>
+    </section>
+
+    <section class="section" id="prototipo">
+      <div class="section-heading">
+        <p class="section-label">Prototipo terminado</p>
+        <h2>Resultado con técnica de laminado</h2>
+      </div>
+      <div class="grid-2">
+        <article class="photo-card tall">
+          <img src="WhatsApp Image 2026-06-04 at 12.42.41 AM (10).jpeg" alt="Prototipo de cancelería antes del acabado final" />
+          <div class="caption">
+            <h3>Antes del acabado final</h3>
+            <p>Se observa el marco armado con las piezas laminadas y la lámina translúcida al centro.</p>
+          </div>
+        </article>
+        <article class="photo-card tall">
+          <img src="WhatsApp Image 2026-06-04 at 12.42.41 AM (11).jpeg" alt="Prototipo de cancelería terminado y pintado" />
+          <div class="caption">
+            <h3>Prototipo final</h3>
+            <p>Resultado visual después del ensamble, lijado y acabado con pintura.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section safety" id="seguridad">
+      <div>
+        <p class="section-label">Seguridad</p>
+        <h2>Precauciones importantes</h2>
+      </div>
+      <div class="safety-list">
+        <p>
+          El PVC no debe quemarse ni sobrecalentarse. Durante el corte, planchado, lijado, aplicación
+          de pintura o uso de adhesivos, se debe trabajar con ventilación y protección.
+        </p>
+        <ul>
+          <li>Usar lentes de seguridad.</li>
+          <li>Usar guantes al cortar, calentar o lijar.</li>
+          <li>Evitar inhalar polvo de lijado.</li>
+          <li>No usar fuego directo sobre el PVC.</li>
+          <li>Suspender el calentamiento si aparece humo u olor fuerte.</li>
+          <li>Aplicar pintura y adhesivos en un lugar ventilado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section conclusion" id="conclusion">
+      <p class="section-label">Conclusión</p>
+      <h2>Viable como proyecto escolar</h2>
+      <p>
+        El prototipo demuestra que el PVC recuperado puede reutilizarse para crear una maqueta de
+        cancelería. La técnica de laminado, apoyada con planchado controlado y prensado artesanal,
+        permite formar piezas tipo perfil con recursos accesibles. Aunque no sustituye a una ventana
+        profesional, sí funciona como proyecto escolar ambiental, técnico y creativo.
+      </p>
+    </section>
+
+    <section class="section sources">
+      <div class="section-heading">
+        <p class="section-label">Fuentes</p>
+        <h2>Referencias consultadas</h2>
+      </div>
+      <p>
+        Britannica: historia y propiedades del PVC. ECVM/VinylPlus: producción y reciclaje mecánico
+        del PVC. SEMARNAT: residuos de manejo especial y NOM-161-SEMARNAT-2011. Estudios sobre
+        degradación térmica del PVC y liberación de HCl. Referencias comerciales de México:
+        Acriland, REHAU, Deceuninck, Ventanas Ideal y Biowindows.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto escolar de cancelería con PVC reciclado</p>
+    <a href="#inicio">Volver arriba</a>
+  </footer>
+<script>
+  const nav = document.querySelector(".nav");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 120) {
+      nav.classList.add("nav-hidden");
+    } else {
+      nav.classList.remove("nav-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+</body>
+</html>
+```
